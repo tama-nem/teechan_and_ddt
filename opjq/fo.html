@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="./styles2.css">
+    <script type="text/javascript" src="./fo.js"></script>
+  </head>
+
+  <body>
+      <!--メインの選択画像-->
+      <p id="photo"><a class="js-modal-open" href=""><img src="./images/background.jpg"></a>
+      <!--フェードイン・アウトするモーダルウィンドウ-->
+      <div class="modal js-modal">
+          <div class="modal__bg js-modal-close">
+          </div>
+          <div class="modal__content">
+	      <p><img id="fade-image" src="./images/noon.jpg"><br>
+              <a class="js-modal-close" href="">閉じる</a>
+          </div><!--modal__inner-->
+      </div><!--modal-->
+  </body>
+</html>

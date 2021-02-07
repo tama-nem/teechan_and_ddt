@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="./styles_animate.css">
+    <script type="text/javascript" src="./teechan.js"></script>
+  </head>
+
+  <body>
+      <div id="wholeform">
+
+        <!--メインの選択画像-->
+        <!--href=""だとクリックするとサイトごと更新されてしまうことがあり
+        　  hrefなしだとマウスカーソルが変わらなかったり
+            という試行錯誤の上での空のjavascript埋め込みなんだけど
+            もっといい方法あるかな？-->
+        <a id="js-modal-open" href="javascript:;">
+          <img class="background-image behind" src="./images/map_objects/teru-map_bg.png">
+        </a>
+        <!-- ひとまず昼の画像をデフォルトで設定しておいて、時間によってsrcを変更しては。上のteru-map_bgも同様-->
+        <img class="background-image-start forward" src="./images/map_objects/teru-map_bg_start.png">
+        
+        <!--トップの説明キャラ-->
+        <img class='top-character most-forward' src="./images/map_objects/top_character.png">
+        <img class='top-character-mark most-forward' src="./images/map_objects/top_character_mark.png">
+        <p id="fukidashi-text" class="fukidashi hidden most-forward"></p>
+
+        <!--フェードイン・アウトするモーダルウィンドウ-->
+  	    <p>
+        <a id='fade-image-link' href="javascript:;">
+          <img id="fade-image" class='hidden most-forward' src="./images/noon.jpg">
+        </a>
+
+      </div>
+      <br>
+  </body>
+</html>

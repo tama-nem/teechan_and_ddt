@@ -1,0 +1,14 @@
+require 'opal'
+require 'opal-jquery'
+
+desc "Build our app to sample.js"
+task :build do
+  Opal.append_path "app"
+
+  File.binwrite "alert.js", \
+   Opal::Builder.build("alert").to_s
+  File.binwrite "teechan.js", \
+   Opal::Builder.build("teechan").to_s
+  File.binwrite "read_setting_json.js", \
+   Opal::Builder.build("read_setting_json").to_s
+end

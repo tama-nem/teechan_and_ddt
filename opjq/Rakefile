@@ -1,0 +1,10 @@
+require 'opal'
+require 'opal-jquery'
+
+desc "Build our app to fs.js"
+task :build do
+  Opal.append_path "app"
+
+  File.binwrite "fo.js", \
+   Opal::Builder.build("fo").to_s
+end
